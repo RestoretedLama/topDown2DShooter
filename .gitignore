@@ -1,1 +1,8 @@
-/Library/ 
+/Temp/
+/Library/
+/Logs/
+/obj/
+/Build/
+*.user
+*.csproj
+*.sln
