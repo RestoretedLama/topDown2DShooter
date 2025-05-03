@@ -11,6 +11,9 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private float recoilDuration = 0.1f;
     [SerializeField] private float fireRate = 0.2f;  // Cooldown süresi (her ateş arasında)
     [SerializeField] private float autoFireRate = 0.1f;  // Sürekli ateş için zaman aralığı
+    [SerializeField] private GameObject muzzleFlashPrefab;  // Muzzle Flash prefab referansı
+    [SerializeField] private float muzzleFlashDuration = 0.1f;  // Ne kadar süreyle görünsün
+
     private bool isRecoiling = false;
     private Vector3 originalLocalPosition;
     private float lastFireTime = 0f;  // Son ateş zamanı
@@ -97,7 +100,18 @@ public class WeaponController : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
+
+        ShowMuzzleFlash();  // Muzzle Flash efekti göster
     }
+    private void ShowMuzzleFlash()
+    {
+        if (muzzleFlashPrefab != null)
+        {
+            GameObject flash = Instantiate(muzzleFlashPrefab, firePoint.position, firePoint.rotation, firePoint);
+            Destroy(flash, muzzleFlashDuration); // Belirli süre sonra yok et
+        }
+    }
+
 
     private void DoRecoil()
     {
