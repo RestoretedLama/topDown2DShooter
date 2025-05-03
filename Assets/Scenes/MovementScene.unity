@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &503175865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4928530127360285695, guid: 593ecc649f838b240b50675afb6d7b20, type: 3}
+  m_PrefabInstance: {fileID: 6891040446024091867}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &927607486
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,9 +232,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bead23dc0f31daf4aa4d3251832b2124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1346804937}
   smoothSpeed: 0.125
   offset: {x: 0, y: 0, z: -5}
+--- !u!4 &1346804937 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7014642732678255558, guid: 593ecc649f838b240b50675afb6d7b20, type: 3}
+  m_PrefabInstance: {fileID: 6891040446024091867}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6891040446024091867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -238,6 +248,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2694894728514934989, guid: 593ecc649f838b240b50675afb6d7b20, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 6891040446024091868}
+    - target: {fileID: 2694894728514934989, guid: 593ecc649f838b240b50675afb6d7b20, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 7707441040515344618, guid: 9451d9cd6b33888419ce776744214787, type: 3}
     - target: {fileID: 4073819636910412117, guid: 593ecc649f838b240b50675afb6d7b20, type: 3}
       propertyPath: m_Name
       value: Main_Character
@@ -282,11 +300,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2694894728514934989, guid: 593ecc649f838b240b50675afb6d7b20, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4928530127360285695, guid: 593ecc649f838b240b50675afb6d7b20, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6891040446024091869}
   m_SourcePrefab: {fileID: 100100000, guid: 593ecc649f838b240b50675afb6d7b20, type: 3}
+--- !u!4 &6891040446024091868 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7592956216890271406, guid: 593ecc649f838b240b50675afb6d7b20, type: 3}
+  m_PrefabInstance: {fileID: 6891040446024091867}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6891040446024091869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503175865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 033ca09b6d6db1e44a9538304dd58e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 6891040446024091868}
+  bulletPrefab: {fileID: 7707441040515344618, guid: 9451d9cd6b33888419ce776744214787, type: 3}
+  bulletForce: 20
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
