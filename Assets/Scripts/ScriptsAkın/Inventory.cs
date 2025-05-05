@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public class Inventory : MonoBehaviour
 {
-    public int capacity = 20;
+    public int capacity = 8;
     public UnityEvent onInventoryChanged;
 
     [Tooltip("Bu transform altına instantiate edilecek silahları parent olarak atayın.")]

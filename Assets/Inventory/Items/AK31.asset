@@ -16,4 +16,4 @@ MonoBehaviour:
   icon: {fileID: -131741362, guid: 8d9a720f7f3915c4ba789eef7b19384f, type: 3}
   isStackable: 0
   itemType: 1
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 6256989775317104420, guid: af663176490354e7e88f3d8e7cd7a523, type: 3}

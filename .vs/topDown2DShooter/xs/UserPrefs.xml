@@ -1,32 +1,25 @@
 ﻿<Properties StartupConfiguration="{C5425627-CA5E-4753-1E38-A0A068352FAC}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ScriptsAkın/InventoryUI.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7fa94968-be09-4638-b6cd-72dbc00ddfd7" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ScriptsAkın/Inventory.cs">
     <Files>
-      <File FileName="Assets/Scripts/ScriptsAkın/Item.cs" Line="16" Column="1" />
-      <File FileName="Assets/Scripts/ScriptsAkın/Inventory.cs" Line="128" Column="1" />
-      <File FileName="Assets/Scripts/ScriptsAkın/InventoryUI.cs" Line="51" Column="1" />
+      <File FileName="Assets/Scripts/ScriptsAkın/Item.cs" />
+      <File FileName="Assets/Scripts/ScriptsAkın/Inventory.cs" Line="7" Column="28" />
+      <File FileName="Assets/Scripts/ScriptsAkın/InventoryUI.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="topDown2DShooter">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="ScriptsAkın" expanded="True">
-                  <Node name="InventoryUI.cs" selected="True" />
-                </Node>
-                <Node name="ScriptsEnis" expanded="True" />
-              </Node>
-            </Node>
+          <Node name="topDown2DShooter" selected="True">
+            <Node name="Assets" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="038f1f12-77a0-4dc2-b221-476ad9140864" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
