@@ -23,4 +23,10 @@ public class HealthTotemBuff : MonoBehaviour
         }
         Destroy(gameObject, duration);
     }
+    void OnDrawGizmosSelected()
+    {
+        // Test için radius göster
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, radius);
+    }
 }
