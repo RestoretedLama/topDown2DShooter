@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6b08c813-b573-42c0-b622-21cb9995b079" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.topDown2DShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.topDown2DShooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerEnis/Main_Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerEnis/Main_Character.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MovementScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MovementScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsEnis/Camera.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsEnis/Camera.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/InventorySlot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/InventorySlot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsAkın/InventoryUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsAkın/InventoryUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/topDown2DShooter.sln" beforeDir="false" afterPath="$PROJECT_DIR$/topDown2DShooter.sln" afterDir="false" />
     </list>
@@ -37,7 +34,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;enis&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Akın&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -109,6 +106,8 @@
       <workItem from="1746275664967" duration="628000" />
       <workItem from="1746276323717" duration="127000" />
       <workItem from="1746276618843" duration="206000" />
+      <workItem from="1746472319175" duration="160000" />
+      <workItem from="1746472534942" duration="385000" />
     </task>
     <servers />
   </component>

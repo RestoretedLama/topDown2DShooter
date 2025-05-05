@@ -24,7 +24,7 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    void UpdateUI()
+    public void UpdateUI()
     {
         for (int i = 0; i < inventory.capacity; i++)
         {
@@ -37,12 +37,14 @@ public class InventoryUI : MonoBehaviour
             {
                 image.sprite = data.item.icon;
                 image.enabled = true;
-                qtyText.text = data.item.isStackable ? data.quantity.ToString() : "";
+                // HATA VURDA 
+               // qtyText.text = data.item.isStackable ? data.quantity.ToString() : "";
             }
             else
             {
                 image.sprite = null;
                 image.enabled = false;
+                // HATA VURDA 
                 qtyText.text = "";
             }
         }
