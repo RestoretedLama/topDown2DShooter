@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b08c813-b573-42c0-b622-21cb9995b079" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BaseEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BaseEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.topDown2DShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.topDown2DShooter/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsEnis/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsEnis/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topDown2DShooter.sln" beforeDir="false" afterPath="$PROJECT_DIR$/topDown2DShooter.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +112,7 @@
       <workItem from="1746453558773" duration="416000" />
       <workItem from="1746467927293" duration="540000" />
       <workItem from="1746473294040" duration="120000" />
+      <workItem from="1746473491261" duration="457000" />
     </task>
     <servers />
   </component>
