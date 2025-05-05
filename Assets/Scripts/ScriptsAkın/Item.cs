@@ -1,3 +1,4 @@
+// Item.cs
 using UnityEngine;
 
 public enum ItemType { Consumable, Weapon, Other }

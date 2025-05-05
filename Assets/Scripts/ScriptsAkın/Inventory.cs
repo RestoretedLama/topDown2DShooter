@@ -1,3 +1,4 @@
+// Inventory.cs
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -95,6 +96,8 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
+    [HideInInspector] public int selectedIndex = -1;
+
     /// <summary>
     /// i’nci slottaki öğeyi ekip et (yalnızca ItemType.Weapon için).
     /// </summary>
@@ -108,20 +111,26 @@ public class Inventory : MonoBehaviour
             && slot.item.itemType == ItemType.Weapon
             && slot.item.weaponPrefab != null)
         {
-            // Önce varsa eski silahı at
+            // önceki silahı kaldır
             if (currentWeapon != null)
                 Destroy(currentWeapon);
 
-            // Yeni silahı instantiate et ve sıfır pozisyonda sabitle
             currentWeapon = Instantiate(slot.item.weaponPrefab, weaponHolder);
             currentWeapon.transform.localPosition = Vector3.zero;
             currentWeapon.transform.localRotation = Quaternion.identity;
+
+            // **Seçili slot’u güncelle ve UI’ı tetikle**
+            selectedIndex = slotIndex;
+            onInventoryChanged.Invoke();
         }
         else
         {
-            // Eğer o slotta silah yoksa, ekipli silahı kaldırmak istersen:
+            // silah yoksa ekipli silahı da kaldır, deselect yap
             if (currentWeapon != null)
                 Destroy(currentWeapon);
+
+            selectedIndex = -1;
+            onInventoryChanged.Invoke();
         }
     }
 }
