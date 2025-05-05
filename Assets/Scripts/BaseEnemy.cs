@@ -4,12 +4,12 @@ using UnityEngine;
 public class BaseEnemy : MonoBehaviour
 {
     [Header("Stats")]
-    [Tooltip("Düşmanın maksimum canı")]
+    [Tooltip("DÃ¼ÅŸmanÄ±n maksimum canÄ±")]
     public float maxHealth = 100f;
-    [Tooltip("Düşmanın güncel canı")]
+    [Tooltip("DÃ¼ÅŸmanÄ±n gÃ¼ncel canÄ±")]
     public float currentHealth;
 
-    [Tooltip("Düşmanın vurduğu hasar")]
+    [Tooltip("DÃ¼ÅŸmanÄ±n vurduÄŸu hasar")]
     public float damage = 10f;
 
     [Header("Buff Flags")]

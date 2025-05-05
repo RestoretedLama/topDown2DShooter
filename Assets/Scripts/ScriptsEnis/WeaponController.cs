@@ -125,5 +125,6 @@ public class WeaponController : MonoBehaviour
                 transform.DOLocalMove(originalLocalPosition, recoilDuration)
                     .OnComplete(() => isRecoiling = false); // Animasyon bitti
             });
+        
     }
 }

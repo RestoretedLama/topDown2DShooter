@@ -11,6 +11,8 @@ public class Bullet : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             EnemyFlash enemyFlash = collision.GetComponent<EnemyFlash>();
+            BaseEnemy be = GetComponent<BaseEnemy>();
+            be.TakeDamage(50);
             if (enemyFlash != null)
             {
                 enemyFlash.FlashWhite(whiteDuration);
