@@ -17,9 +17,12 @@ public class ShamanEnemy : MonoBehaviour
     public float totemOffsetX = 1f;
 
     [Header("Buff Miktarları")]
-    public float healthBuffAmount = 50f;
-    public float speedBuffAmount = 2f;   
-    public float dmgBuffAmount = 10f;  
+    [Tooltip("HealthTotem’in saniyede ne kadar heal vereceği")]
+    public float healthBuffAmount = 10f;
+    [Tooltip("SpeedTotem’in eklenecek hız miktarı")]
+    public float speedBuffAmount = 2f;
+    [Tooltip("DmgTotem’in eklenecek hasar miktarı")]
+    public float dmgBuffAmount = 10f;
 
     private float nextTotemTime;
 
@@ -40,9 +43,7 @@ public class ShamanEnemy : MonoBehaviour
 
     void SpawnRandomTotem()
     {
-        // 0 → Health, 1 → Speed, 2 → Damage
         int idx = Random.Range(0, 3);
-
         GameObject prefab = null;
         float buffAmt = 0f;
 
@@ -67,21 +68,24 @@ public class ShamanEnemy : MonoBehaviour
         Vector3 spawnPos = transform.position + Vector3.right * totemOffsetX;
         GameObject totem = Instantiate(prefab, spawnPos, Quaternion.identity);
 
-        // İlgili TotemBuff script'ine miktarı ilet
+        // İlgili TotemBuff script’ine doğru alanı ayarla
         if (idx == 0)
         {
-            var buff = totem.GetComponent<HealthTotemBuff>();
-            if (buff != null) buff.buffAmount = buffAmt;
+            var healthBuff = totem.GetComponent<HealthTotemBuff>();
+            if (healthBuff != null)
+                healthBuff.healPerSecond = buffAmt;
         }
         else if (idx == 1)
         {
-            var buff = totem.GetComponent<SpeedTotemBuff>();
-            if (buff != null) buff.buffAmount = buffAmt;
+            var speedBuff = totem.GetComponent<SpeedTotemBuff>();
+            if (speedBuff != null)
+                speedBuff.speedBuffAmount = buffAmt;
         }
-        else 
+        else // idx == 2
         {
-            var buff = totem.GetComponent<DmgTotemBuff>();
-            if (buff != null) buff.buffAmount = buffAmt;
+            var dmgBuff = totem.GetComponent<DmgTotemBuff>();
+            if (dmgBuff != null)
+                dmgBuff.dmgBuffAmount = buffAmt;
         }
     }
 }

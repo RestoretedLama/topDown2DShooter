@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8672758950756211161}
   - component: {fileID: 2165480342105634412}
+  - component: {fileID: 25219881450801649}
   m_Layer: 0
   m_Name: DmgTotem
   m_TagString: Untagged
@@ -45,9 +46,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03576a2200fa9b643b8e806ebf865d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buffAmount: 0
-  radius: 3
+  dmgBuffAmount: 10
   duration: 5
+--- !u!58 &25219881450801649
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7950627799671879993}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3
 --- !u!1 &8724458198800021867
 GameObject:
   m_ObjectHideFlags: 0
