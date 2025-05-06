@@ -98,6 +98,8 @@ GameObject:
   - component: {fileID: 3464043253535442845}
   - component: {fileID: 4990677110312457474}
   - component: {fileID: 8245206834037326822}
+  - component: {fileID: 4836818227289477767}
+  - component: {fileID: 2135264588254362819}
   m_Layer: 0
   m_Name: BasicEnemy
   m_TagString: Enemy
@@ -177,7 +179,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -211,6 +213,9 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   damage: 10
+  hasReceivedHealthBuff: 0
+  hasReceivedSpeedBuff: 0
+  hasReceivedDamageBuff: 0
 --- !u!114 &8245206834037326822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,3 +229,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testDamage: 50
+--- !u!114 &4836818227289477767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5539181374476571912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ca1a2eab71db124f984d1a8de5db782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashDuration: 0.2
+  scaleMultiplier: 1.2
+  scaleDuration: 0.1
+--- !u!114 &2135264588254362819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5539181374476571912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ff30e828fa20e43ad43751302ac57a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackInterval: 3

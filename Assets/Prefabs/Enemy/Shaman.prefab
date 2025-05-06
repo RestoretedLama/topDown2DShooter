@@ -90,6 +90,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthTotemPrefab: {fileID: 2668442265871200337, guid: 4c81e59e43a83dc4e9fc82b82bb3c9ab, type: 3}
+  speedTotemPrefab: {fileID: 2515453991954487627, guid: 9fb344e537a4c5142a2c0b4b4cdc0970, type: 3}
+  dmgTotemPrefab: {fileID: 7950627799671879993, guid: 9e92412a8e4b47241ae2d530cda8decd, type: 3}
   totemCooldown: 10
-  healthBuffAmount: 50
+  initialDelay: 5
   totemOffsetX: 1
+  healthBuffAmount: 50
+  speedBuffAmount: 2
+  dmgBuffAmount: 10
