@@ -6,9 +6,28 @@
   <component name="ChangeListManager">
     <list default="true" id="6b08c813-b573-42c0-b622-21cb9995b079" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.topDown2DShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.topDown2DShooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/InventorySlot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/InventorySlot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsAkın/InventoryUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsAkın/InventoryUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Inventory/Items/AK31.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Inventory/Items/AK31.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Inventory/Items/AWP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Inventory/Items/AWP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Inventory/Items/M4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Inventory/Items/M4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Inventory/Items/MESUT KOMSER.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Inventory/Items/MESUT KOMSER.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Inventory/Items/Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Inventory/Items/Pistol.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Inventory/Items/Shotgun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Inventory/Items/Shotgun.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Inventory/Items/UZI EL CHAVO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Inventory/Items/UZI EL CHAVO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Inventory/Items/VECTOR.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Inventory/Items/VECTOR.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Guns/AK31.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Guns/AK31.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Guns/AWP.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Guns/AWP.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Guns/M4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Guns/M4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Guns/MESUT KOMSER.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Guns/MESUT KOMSER.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Guns/Pistol.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Guns/Pistol.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Guns/Shotgun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Guns/Shotgun.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Guns/UZI EL CHAVO.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Guns/UZI EL CHAVO.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Guns/VECTOR.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Guns/VECTOR.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MovementScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MovementScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsAkın/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsAkın/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsAkın/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsAkın/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsAkın/WeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsAkın/WeaponController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/topDown2DShooter.sln" beforeDir="false" afterPath="$PROJECT_DIR$/topDown2DShooter.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +53,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Akın&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;enis2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -108,6 +127,10 @@
       <workItem from="1746276618843" duration="206000" />
       <workItem from="1746472319175" duration="160000" />
       <workItem from="1746472534942" duration="385000" />
+      <workItem from="1746651684429" duration="150000" />
+      <workItem from="1746651987673" duration="26000" />
+      <workItem from="1746652314783" duration="36000" />
+      <workItem from="1746652406394" duration="968000" />
     </task>
     <servers />
   </component>

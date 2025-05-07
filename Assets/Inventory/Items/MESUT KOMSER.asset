@@ -17,7 +17,9 @@ MonoBehaviour:
   isStackable: 0
   itemType: 1
   weaponPrefab: {fileID: 3160633734927038259, guid: ff36243c2362f46b28e4e9fcaeef1eec, type: 3}
+  muzzleFlash: {fileID: 100004, guid: 302577c4c425ce14781bc5dd214f5576, type: 3}
   fireRate: 1
   damage: 50
   magazineSize: 6
   reloadTime: 1.5
+  MuzzleFlashDuration: 0.05

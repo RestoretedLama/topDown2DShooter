@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class Inventory : MonoBehaviour
 {
+    public static Inventory instance { get; set; }
     public int capacity = 8;
     public UnityEvent onInventoryChanged;
 
@@ -26,6 +27,7 @@ public class Inventory : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         for (int i = 0; i < capacity; i++)
             slots.Add(new Slot { item = null, quantity = 0 });
     }
@@ -153,4 +155,14 @@ public class Inventory : MonoBehaviour
     {
         return currentWeaponController;
     }
+
+    // Get the currently equipped Item ScriptableObject
+    public Item GetCurrentItem()
+    {
+        if (selectedIndex >= 0 && selectedIndex < slots.Count)
+            return slots[selectedIndex].item;
+
+        return null;
+    }
+
 }

@@ -103,6 +103,7 @@ MonoBehaviour:
   bulletForce: 20
   recoilDistance: 0.2
   recoilDuration: 0.1
+  MuzzleFlashDuration: 0.05
 --- !u!1 &8060405356268300958
 GameObject:
   m_ObjectHideFlags: 0
