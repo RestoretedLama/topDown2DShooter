@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a4f5454cf0c45a8bd388cd6747832d, type: 3}
+  m_Name: Shotgun
+  m_EditorClassIdentifier: 
+  itemName: Shotgun
+  icon: {fileID: 1912194521, guid: 8d9a720f7f3915c4ba789eef7b19384f, type: 3}
+  isStackable: 0
+  itemType: 1
+  weaponPrefab: {fileID: 3160633734927038259, guid: 9952de163f1814fe88c0576eb939473d, type: 3}
+  muzzleFlash: {fileID: 1875803113608070766, guid: 1b2dfc4d9a86fad489a8500226aad77a, type: 3}
+  fireRate: 1
+  damage: 85
+  magazineSize: 7
+  reloadTime: 1.5
+  MuzzleFlashDuration: 0.05
