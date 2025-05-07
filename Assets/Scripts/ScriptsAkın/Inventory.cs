@@ -22,6 +22,7 @@ public class Inventory : MonoBehaviour
 
     // Sahnedeki aktif ekipli silah referansı
     private GameObject currentWeapon;
+    private WeaponController currentWeaponController;
 
     private void Awake()
     {
@@ -99,7 +100,7 @@ public class Inventory : MonoBehaviour
     [HideInInspector] public int selectedIndex = -1;
 
     /// <summary>
-    /// i’nci slottaki öğeyi ekip et (yalnızca ItemType.Weapon için).
+    /// i'nci slottaki öğeyi ekip et (yalnızca ItemType.Weapon için).
     /// </summary>
     public void EquipSlot(int slotIndex)
     {
@@ -115,11 +116,23 @@ public class Inventory : MonoBehaviour
             if (currentWeapon != null)
                 Destroy(currentWeapon);
 
+            // Spawn and set up the new weapon
             currentWeapon = Instantiate(slot.item.weaponPrefab, weaponHolder);
             currentWeapon.transform.localPosition = Vector3.zero;
             currentWeapon.transform.localRotation = Quaternion.identity;
+            
+            // Initialize the weapon controller with the item data
+            currentWeaponController = currentWeapon.GetComponent<WeaponController>();
+            if (currentWeaponController != null)
+            {
+                currentWeaponController.Initialize(slot.item);
+            }
+            else
+            {
+                Debug.LogWarning($"WeaponController component missing on {slot.item.itemName} prefab!");
+            }
 
-            // **Seçili slot’u güncelle ve UI’ı tetikle**
+            // **Seçili slot'u güncelle ve UI'ı tetikle**
             selectedIndex = slotIndex;
             onInventoryChanged.Invoke();
         }
@@ -129,8 +142,15 @@ public class Inventory : MonoBehaviour
             if (currentWeapon != null)
                 Destroy(currentWeapon);
 
+            currentWeaponController = null;
             selectedIndex = -1;
             onInventoryChanged.Invoke();
         }
+    }
+    
+    // Get the current weapon controller (can be used by UI or other systems)
+    public WeaponController GetCurrentWeaponController()
+    {
+        return currentWeaponController;
     }
 }

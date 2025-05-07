@@ -13,4 +13,11 @@ public class Item : ScriptableObject
     [Header("Weapon settings (only if ItemType == Weapon)")]
     public ItemType itemType = ItemType.Consumable;
     public GameObject weaponPrefab;
+    
+    [Header("Weapon Stats")]
+    [Tooltip("Shots per second")]
+    public float fireRate = 2f;
+    public int damage = 10;
+    public int magazineSize = 30;
+    public float reloadTime = 1.5f;
 }

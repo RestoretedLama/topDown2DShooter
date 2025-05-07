@@ -465,6 +465,10 @@ MonoBehaviour:
   inventory: {fileID: 1418720210}
   slotParent: {fileID: 1343542171}
   slotPrefab: {fileID: 8720971926476839729, guid: fd73048532ab14f7586157e56f5bce93, type: 3}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  selectedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  normalScale: {x: 1, y: 1, z: 1}
+  selectedScale: {x: 1.1, y: 1.1, z: 1}
 --- !u!1 &1343542170
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +585,7 @@ MonoBehaviour:
     quantity: 1
   - item: {fileID: 11400000, guid: e9101efcf48fa43f7babd2fda1c1f3ca, type: 2}
     quantity: 1
+  selectedIndex: -1
 --- !u!1 &2029184380
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +745,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 503175865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 033ca09b6d6db1e44a9538304dd58e98, type: 3}
+  m_Script: {fileID: 11500000, guid: 57dc685d02c8749a591163f683df4a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 6891040446024091868}
@@ -748,8 +753,6 @@ MonoBehaviour:
   bulletForce: 20
   recoilDistance: 0.2
   recoilDuration: 0.1
-  fireRate: 0.2
-  autoFireRate: 0.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

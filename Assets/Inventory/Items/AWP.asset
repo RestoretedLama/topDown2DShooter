@@ -17,3 +17,7 @@ MonoBehaviour:
   isStackable: 0
   itemType: 1
   weaponPrefab: {fileID: 3160633734927038259, guid: 339246fa99b6f41dd839197e4d31e704, type: 3}
+  fireRate: 0.5
+  damage: 100
+  magazineSize: 5
+  reloadTime: 1.5
