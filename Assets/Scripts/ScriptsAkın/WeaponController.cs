@@ -136,14 +136,6 @@ public class WeaponController : MonoBehaviour
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-
-        Bullet bulletComponent = bullet.GetComponent<Bullet>();
-        if (bulletComponent != null)
-        {
-            bulletComponent.SetDamage(damage);
-            bulletComponent.SetShooterLayer(transform.root.gameObject.layer);
-        }
-
         rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
 
         currentAmmo--;

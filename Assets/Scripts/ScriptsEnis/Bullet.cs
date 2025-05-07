@@ -3,8 +3,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float whiteDuration = 0.1f;
-    public GameObject hitEffectPrefab; // Inspector'dan atayacağın efekt prefabı
-    public float effectLifetime = 1f;   // Efektin kaç saniye sonra yok olacağı
+      // Efektin kaç saniye sonra yok olacağı
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
