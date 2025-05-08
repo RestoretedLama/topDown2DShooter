@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 787941052374507337}
   - component: {fileID: 4160673428847404918}
   - component: {fileID: 8702404324147896092}
+  - component: {fileID: 7436871606225222119}
   m_Layer: 6
   m_Name: Main_Character
   m_TagString: Player
@@ -206,6 +207,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 787941052374507337}
+  dashSpeed: 20
+  dashDuration: 0.1
+  dashCooldown: 0.5
 --- !u!114 &8702404324147896092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +257,21 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: e9101efcf48fa43f7babd2fda1c1f3ca, type: 2}
     quantity: 1
   selectedIndex: -1
+--- !u!114 &7436871606225222119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073819636910412117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bb53e71cde45b4ab9e2deaeda83df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  health: 0
+  armor: 0.05
 --- !u!1 &4928530127360285695
 GameObject:
   m_ObjectHideFlags: 0

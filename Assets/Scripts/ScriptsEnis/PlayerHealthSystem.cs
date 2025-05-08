@@ -1,15 +1,19 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; // Slider için gerekli
 
 public class PlayerHealthSystem : MonoBehaviour
 {
-    public static PlayerHealthSystem Instance { get; set;}
+    public static PlayerHealthSystem Instance { get; set; }
+
+    [Header("Health Settings")]
     public float maxHealth;
     public float health;
     public float armor = 0.05f;
-    
+
+    [Header("UI")]
+    [SerializeField] private Slider healthBar;
+
     private void Awake()
     {
         Instance = this;
@@ -18,16 +22,24 @@ public class PlayerHealthSystem : MonoBehaviour
     private void Start()
     {
         health = maxHealth;
+        if (healthBar != null)
+        {
+            healthBar.maxValue = maxHealth;
+            healthBar.value = health;
+        }
     }
 
-    public  void giveHealth(float heal)
+    public void giveHealth(float heal)
     {
-        health = heal;
+        health += heal;
         if (health > maxHealth)
         {
             health = maxHealth;
         }
+
+        UpdateHealthUI();
     }
+
     public void TakeDamage(float damage)
     {
         float reducedDamage = damage * (1f - armor);
@@ -35,9 +47,19 @@ public class PlayerHealthSystem : MonoBehaviour
 
         Debug.Log("Gelen Hasar: " + damage + " | Azaltılmış Hasar: " + reducedDamage + " | Kalan Can: " + health);
 
+        UpdateHealthUI();
+
         if (health <= 0)
         {
             Die();
+        }
+    }
+
+    private void UpdateHealthUI()
+    {
+        if (healthBar != null)
+        {
+            healthBar.value = health;
         }
     }
 
