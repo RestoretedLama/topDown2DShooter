@@ -1,33 +1,30 @@
+using System;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
     public float whiteDuration = 0.1f;
-      // Efektin kaç saniye sonra yok olacağı
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private float damage;
+    public void Start()
     {
-        if (collision.CompareTag("Enemy"))
+        damage = Inventory.instance.GetCurrentItem().damage;
+    }
+    // Efektin kaç saniye sonra yok olacağı
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemy"))
         {
-            EnemyFlash enemyFlash = collision.GetComponent<EnemyFlash>();
-            BaseEnemy be = GetComponent<BaseEnemy>();
-            be.TakeDamage(50);
+            EnemyFlash enemyFlash = other.GetComponent<EnemyFlash>();
+            other.GetComponent<BaseEnemy>().TakeDamage(damage);
             if (enemyFlash != null)
             {
                 enemyFlash.FlashWhite(whiteDuration);
             }
 
-            // Vuruş efektini oluştur
-            /*
-            if (hitEffectPrefab != null)
-            {
-                GameObject effect = Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
-                Destroy(effect, effectLifetime); // Efekti bir süre sonra yok et
-            }*/
-
-            Destroy(gameObject); // Mermiyi yok et
+            Destroy(gameObject);
         }
         
     }
-    
+
 }
