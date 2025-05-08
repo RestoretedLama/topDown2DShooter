@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6b08c813-b573-42c0-b622-21cb9995b079" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.topDown2DShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.topDown2DShooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MovementScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MovementScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsEnis/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsEnis/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsAkın/WeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsAkın/WeaponController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsEnis/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsEnis/Movement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +115,7 @@
       <workItem from="1746653864683" duration="25000" />
       <workItem from="1746717925731" duration="22000" />
       <workItem from="1746718023496" duration="354000" />
+      <workItem from="1746718754429" duration="851000" />
     </task>
     <servers />
   </component>
