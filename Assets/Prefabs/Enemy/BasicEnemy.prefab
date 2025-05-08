@@ -96,6 +96,8 @@ GameObject:
   - component: {fileID: 4733521149211758540}
   - component: {fileID: 6167571684001205647}
   - component: {fileID: 3464043253535442845}
+  - component: {fileID: 1149427863433572363}
+  - component: {fileID: 2006096490448007400}
   m_Layer: 7
   m_Name: BasicEnemy
   m_TagString: Enemy
@@ -194,3 +196,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
+--- !u!114 &1149427863433572363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5539181374476571912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d86654cae53ab4889c60750974964a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 100
+  damage: 10
+  hasReceivedHealthBuff: 0
+  hasReceivedSpeedBuff: 0
+  hasReceivedDamageBuff: 0
+--- !u!114 &2006096490448007400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5539181374476571912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ca1a2eab71db124f984d1a8de5db782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashDuration: 0.2
+  scaleMultiplier: 1.2
+  scaleDuration: 0.1
