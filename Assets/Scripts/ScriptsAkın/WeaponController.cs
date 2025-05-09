@@ -89,6 +89,8 @@ public class WeaponController : MonoBehaviour
         muzzleFlashPrefab = item.muzzleFlash;
 
         currentAmmo = magazineSize;
+        AmmoUIManager.Instance.UpdateAmmo(currentAmmo, magazineSize);
+        AmmoUIManager.Instance.ShowAmmo();
     }
 
     private void AimTowardsMouse()
@@ -149,6 +151,8 @@ public class WeaponController : MonoBehaviour
 
         currentAmmo--;
 
+        AmmoUIManager.Instance.UpdateAmmo(currentAmmo, magazineSize);
+
         ShowMuzzleFlash(); // 🔥 Show muzzle flash
     }
 
@@ -187,6 +191,9 @@ public class WeaponController : MonoBehaviour
 
         currentAmmo = magazineSize;
         isReloading = false;
+
+        AmmoUIManager.Instance.UpdateAmmo(currentAmmo, magazineSize);
+
 
         Debug.Log($"Reloaded {weaponItem.itemName}: {currentAmmo}/{magazineSize}");
     }
