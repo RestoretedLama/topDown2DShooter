@@ -136,6 +136,7 @@ public class Inventory : MonoBehaviour
 
             // **Seçili slot'u güncelle ve UI'ı tetikle**
             selectedIndex = slotIndex;
+            WeaponAmmoUIController.instance.UpdateAmmoUI();
             onInventoryChanged.Invoke();
         }
         else

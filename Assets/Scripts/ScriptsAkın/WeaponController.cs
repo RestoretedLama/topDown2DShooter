@@ -141,8 +141,8 @@ public class WeaponController : MonoBehaviour
 
     private void Shoot()
     {
-        if (currentAmmo <= 0 || isReloading) return;
-
+        WeaponAmmoUIController.instance.UpdateAmmoUI();
+        if (currentAmmo <= 0 || isReloading) return; 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
@@ -187,6 +187,7 @@ public class WeaponController : MonoBehaviour
 
         currentAmmo = magazineSize;
         isReloading = false;
+        WeaponAmmoUIController.instance.UpdateAmmoUI();
 
         Debug.Log($"Reloaded {weaponItem.itemName}: {currentAmmo}/{magazineSize}");
     }
