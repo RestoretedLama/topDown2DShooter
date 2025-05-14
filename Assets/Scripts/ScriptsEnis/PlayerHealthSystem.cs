@@ -6,13 +6,11 @@ public class PlayerHealthSystem : MonoBehaviour
 {
     public static PlayerHealthSystem Instance { get; set; }
 
-    [Header("Health Settings")]
-    public float maxHealth;
+    [Header("Health Settings")] public float maxHealth;
     public float health;
     public float armor = 0.05f;
 
-    [Header("UI")]
-    [SerializeField] private Slider healthBar;
+    [Header("UI")] [SerializeField] private Slider healthBar;
 
     private void Awake()
     {
@@ -61,6 +59,27 @@ public class PlayerHealthSystem : MonoBehaviour
         {
             healthBar.value = health;
         }
+    }
+
+    public void setMaxHealth(float h)
+    {
+        maxHealth = h;
+        UpdateHealthUI();
+    }
+
+    public float getMaxHealth(float h)
+    {
+        return maxHealth;
+    }
+
+    public void setArmor(float a)
+    {
+        armor = a;
+    }
+
+    public float getArmor()
+    {
+        return armor;
     }
 
     public void Die()
