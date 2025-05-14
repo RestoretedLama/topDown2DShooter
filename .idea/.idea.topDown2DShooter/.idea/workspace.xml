@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b08c813-b573-42c0-b622-21cb9995b079" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.topDown2DShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.topDown2DShooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsAkın/Bullet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsAkın/Bullet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsAkın/WeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsAkın/WeaponController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsEnis/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsEnis/Bullet.cs" afterDir="false" />
-    </list>
+    <list default="true" id="6b08c813-b573-42c0-b622-21cb9995b079" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,6 +109,11 @@
       <workItem from="1746653728514" duration="24000" />
       <workItem from="1746653776359" duration="34000" />
       <workItem from="1746653864683" duration="25000" />
+      <workItem from="1746717925731" duration="22000" />
+      <workItem from="1746718023496" duration="354000" />
+      <workItem from="1746718754429" duration="851000" />
+      <workItem from="1746719661821" duration="294000" />
+      <workItem from="1746720021065" duration="677000" />
     </task>
     <servers />
   </component>

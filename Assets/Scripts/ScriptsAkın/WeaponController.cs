@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
 using DG.Tweening;
 using System.Collections;
 
 public class WeaponController : MonoBehaviour
 {
+    public static WeaponController instance { get; set;}
     [Header("References")]
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
@@ -13,6 +15,7 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private float recoilDistance = 0.2f;
     [SerializeField] private float recoilDuration = 0.1f;
     
+    private bool canShoot;
 
     // Weapon stats (set from Item ScriptableObject)
     private float fireRate;
@@ -35,16 +38,22 @@ public class WeaponController : MonoBehaviour
     public int CurrentAmmo => currentAmmo;
     public int MagazineSize => magazineSize;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
         originalLocalPosition = transform.localPosition;
+        canShoot = true;
     }
 
     void Update()
     {
         AimTowardsMouse();
 
-        if (!isReloading)
+        if (!isReloading & getCanShoot())
         {
             if (Input.GetKey(KeyCode.Mouse0))
             {
@@ -80,6 +89,8 @@ public class WeaponController : MonoBehaviour
         muzzleFlashPrefab = item.muzzleFlash;
 
         currentAmmo = magazineSize;
+        AmmoUIManager.Instance.UpdateAmmo(currentAmmo, magazineSize);
+        AmmoUIManager.Instance.ShowAmmo();
     }
 
     private void AimTowardsMouse()
@@ -140,6 +151,8 @@ public class WeaponController : MonoBehaviour
 
         currentAmmo--;
 
+        AmmoUIManager.Instance.UpdateAmmo(currentAmmo, magazineSize);
+
         ShowMuzzleFlash(); // 🔥 Show muzzle flash
     }
 
@@ -179,6 +192,9 @@ public class WeaponController : MonoBehaviour
         currentAmmo = magazineSize;
         isReloading = false;
 
+        AmmoUIManager.Instance.UpdateAmmo(currentAmmo, magazineSize);
+
+
         Debug.Log($"Reloaded {weaponItem.itemName}: {currentAmmo}/{magazineSize}");
     }
 
@@ -188,5 +204,15 @@ public class WeaponController : MonoBehaviour
         {
             StartCoroutine(Reload());
         }
+    }
+
+    public bool getCanShoot()
+    {
+        return canShoot;
+    }
+
+    public bool setCanShoot(bool can)
+    {
+        return canShoot = can;
     }
 }

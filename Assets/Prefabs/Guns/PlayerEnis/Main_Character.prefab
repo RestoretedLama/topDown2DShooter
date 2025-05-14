@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1969011140607949690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7753204781089085627}
+  m_Layer: 6
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7753204781089085627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969011140607949690}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7592956216890271406}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4073819636910412117
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,9 +44,11 @@ GameObject:
   - component: {fileID: 7608366816769567128}
   - component: {fileID: 787941052374507337}
   - component: {fileID: 4160673428847404918}
+  - component: {fileID: 8702404324147896092}
+  - component: {fileID: 7436871606225222119}
   m_Layer: 6
   m_Name: Main_Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,6 +207,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 787941052374507337}
+  dashSpeed: 20
+  dashDuration: 0.1
+  dashCooldown: 0.5
+--- !u!114 &8702404324147896092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073819636910412117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfed80492d184aa2a69485f804373d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  capacity: 8
+  onInventoryChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
+        m_MethodName: UpdateUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  weaponHolder: {fileID: 7592956216890271406}
+  slots:
+  - item: {fileID: 11400000, guid: 1df000244cd3b427693d13d7c8a72126, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: be38fefadb8604631baf6a05512bd5b2, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: f1453ac14960840248862c9dcebf14a7, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: 6dec1bb8322bb4de29303fc87bd434c1, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: c2782d6a07eb949369c08a9ffe499997, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: bd7f19f0cde694325bdcbd4e9d0ff29e, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: e0f268bda8b7147e5bfa9c057c996835, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: e9101efcf48fa43f7babd2fda1c1f3ca, type: 2}
+    quantity: 1
+  selectedIndex: -1
+--- !u!114 &7436871606225222119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073819636910412117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bb53e71cde45b4ab9e2deaeda83df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  health: 0
+  armor: 0.05
 --- !u!1 &4928530127360285695
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7592956216890271406}
   m_Layer: 6
-  m_Name: FirePoint
+  m_Name: WeaponHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,9 +297,10 @@ Transform:
   m_GameObject: {fileID: 4928530127360285695}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.75, y: -1.25, z: 0}
+  m_LocalPosition: {x: 2.75, y: -1.25, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7753204781089085627}
   m_Father: {fileID: 7014642732678255558}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
