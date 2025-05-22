@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 8383668781847585873}
-  bulletPrefab: {fileID: 7707441040515344618, guid: 9451d9cd6b33888419ce776744214787, type: 3}
+  bulletTag: RifleBullet
   bulletForce: 20
   recoilDistance: 0.2
   recoilDuration: 0.1

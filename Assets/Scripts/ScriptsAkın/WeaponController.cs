@@ -8,7 +8,7 @@ public class WeaponController : MonoBehaviour
     public static WeaponController instance { get; set;}
     [Header("References")]
     [SerializeField] private Transform firePoint;
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private string bulletTag;
 
     [Header("Effects")]
     [SerializeField] private float bulletForce = 20f;
@@ -145,16 +145,21 @@ public class WeaponController : MonoBehaviour
     {
         if (currentAmmo <= 0 || isReloading) return;
 
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        // 🔁 Bullet'i Object Pool'dan çağır
+        GameObject bullet = ObjectPooler.Instance.SpawnFromPool("RifleBullet", firePoint.position, firePoint.rotation);
+
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.velocity = Vector2.zero; // reset in case it was reused
+        rb.angularVelocity = 0f;
         rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
 
         currentAmmo--;
 
         AmmoUIManager.Instance.UpdateAmmo(currentAmmo, magazineSize);
 
-        ShowMuzzleFlash(); // 🔥 Show muzzle flash
+        ShowMuzzleFlash(); // 🔥
     }
+
 
     private void ShowMuzzleFlash()
     {
